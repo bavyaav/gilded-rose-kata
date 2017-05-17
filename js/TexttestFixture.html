@@ -10,7 +10,7 @@
 <script type="text/javascript">
   $( document ).ready(function() {
 
-    $('body').append('<p>OMGHAI!</p>');
+    $('body').append('<p>OMG!</p>');
 
     items.push(new Item('+5 Dexterity Vest', 10, 20));
     items.push(new Item('Aged Brie', 2, 0));
@@ -25,14 +25,23 @@
 
     var days = 2;
 
-    for (var i = 0; i < days; i++) {
+    for (var i = 1; i <= days; i++) {
       showHeaderFor(i);
+      updateQuality();
       showItemsFor(i);
-      update_quality();
     }
+    //edited code contributed by Bavyaa
+    /*for (var i = 1; i <= days; i++) {
+      showHeaderFor(i);
+      updateQuality();
+      showItemsFor(i);
+    }*/
+
 
     function showHeaderFor(day) {
+      $('body').append('<p>quality updated on day ' + day + '</p>');
       $('body').append('<p>-------- day ' + day + ' --------</p>');
+
     }
 
     function showItemsFor(day) {
